@@ -1,8 +1,9 @@
 # LCA-Advanced-CSS-Exercises
-**Trainee:**Angela Beukes
-**Programme:** YouthCode Off-Site — Cohort 2, 2026
-**Course:** Course 1 — Frontend Web Development
-**Topic:** Advanced CSS Exercises
+
+Angela Beukes
+YouthCode Off-Site — Cohort 2, 2026
+Course 1 — Frontend Web Development
+Advanced CSS Exercises
 
 This repository contains my Advanced CSS exercise submissions
 for Week 5 of Course 1 at Life Choices Academy. Each exercise
