@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        margin: 20px;
+        text-align: center;
+      }
+
+      .filters {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .filters button {
+        padding: 10px;
+        border: none;
+        background: lightgray;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .filters button:hover {
+        background: black;
+        color: white;
+      }
+
+      .active {
+        background: black;
+        color: white;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .content {
+        background: white;
+        padding: 10px;
+      }
+
+      /* OVERLAY */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.4s;
+      }
+
+      .card:hover .overlay {
+        opacity: 1;
+      }
+
+      @media (max-width: 900px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+
+    <div class="filters">
+      <button class="active">All</button>
+      <button>Landscapes</button>
+      <button>Portraits</button>
+      <button>Architecture</button>
+    </div>
+
+    <div class="gallery">
+      <!-- LANDSCAPES -->
+      <div class="card landscapes">
+        <img
+          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+        />
+        <div class="content">
+          <h3>Mountain</h3>
+          <p>Landscape</p>
+        </div>
+        <div class="overlay">Mountain scenery</div>
+      </div>
+
+      <div class="card landscapes">
+        <img
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+        />
+        <div class="content">
+          <h3>Forest</h3>
+          <p>Landscape</p>
+        </div>
+        <div class="overlay">Forest view</div>
+      </div>
+
+      <div class="card landscapes">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        />
+        <div class="content">
+          <h3>Ocean</h3>
+          <p>Landscape</p>
+        </div>
+        <div class="overlay">Ocean view</div>
+      </div>
+
+      <div class="card landscapes">
+        <img
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+        />
+        <div class="content">
+          <h3>Desert</h3>
+          <p>Landscape</p>
+        </div>
+        <div class="overlay">Desert dunes</div>
+      </div>
+
+      <div class="card portraits">
+        <img
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+        />
+        <div class="content">
+          <h3>Portrait 1</h3>
+          <p>Portrait</p>
+        </div>
+        <div class="overlay">Smiling woman</div>
+      </div>
+
+      <div class="card portraits">
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+        />
+        <div class="content">
+          <h3>Portrait 2</h3>
+          <p>Portrait</p>
+        </div>
+        <div class="overlay">Male portrait</div>
+      </div>
+
+      <div class="card portraits">
+        <img
+          src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+        />
+        <div class="content">
+          <h3>Portrait 3</h3>
+          <p>Portrait</p>
+        </div>
+        <div class="overlay">Close-up portrait</div>
+      </div>
+
+      <div class="card portraits">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+        />
+        <div class="content">
+          <h3>Portrait 4</h3>
+          <p>Portrait</p>
+        </div>
+        <div class="overlay">Casual portrait</div>
+      </div>
+
+      <div class="card architecture">
+        <img
+          src="https://images.unsplash.com/photo-1486308510493-aa64833637b1"
+        />
+        <div class="content">
+          <h3>Building</h3>
+          <p>Architecture</p>
+        </div>
+        <div class="overlay">Modern building</div>
+      </div>
+
+      <div class="card architecture">
+        <img
+          src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade"
+        />
+        <div class="content">
+          <h3>Bridge</h3>
+          <p>Architecture</p>
+        </div>
+        <div class="overlay">City bridge</div>
+      </div>
+
+      <div class="card architecture">
+        <img
+          src="https://images.unsplash.com/photo-1494526585095-c41746248156"
+        />
+        <div class="content">
+          <h3>Skyscraper</h3>
+          <p>Architecture</p>
+        </div>
+        <div class="overlay">Tall skyscraper</div>
+      </div>
+
+      <div class="card architecture">
+        <img
+          src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
+        />
+        <div class="content">
+          <h3>Modern House</h3>
+          <p>Architecture</p>
+        </div>
+        <div class="overlay">Luxury house</div>
+      </div>
+    </div>
+  </body>
+</html>
